@@ -14,17 +14,6 @@
 </head>
 <body>
 
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="contact-info">
-            <span><i class="fa-solid fa-envelope"></i> care@nifttea.ac.in</span>
-            <span><i class="fa-solid fa-phone"></i> +91 421 2374200</span>
-        </div>
-        <div>
-            <span>NIFT-TEA Knitwear Fashion Institute, Tirupur</span>
-        </div>
-    </div>
-
     <!-- Header Navigation -->
     <header>
         <div class="navbar">
@@ -74,7 +63,7 @@
 
     <div class="container">
 
-        <!-- About Section -->
+        <!-- About Section (Expandable Cards) -->
         <section id="about">
             <div class="section-header">
                 <h2>About Dept. of CARE</h2>
@@ -83,20 +72,59 @@
                 A dedicated centre aimed at strengthening the technological capacity of Textile, Apparel, and Fashion MSMEs in Tirupur. CARE provides incubation support, machine development, and innovative product testing.
             </p>
             <div class="grid-3">
-                <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-microscope"></i></div>
-                    <h3>Key Focus Areas</h3>
-                    <p>Research & Development of new products, process automation, and machinery development for apparel production.</p>
+                <!-- Card 1: Key Focus Areas -->
+                <div class="card expandable-card" onclick="toggleCard(this)">
+                    <div class="card-summary">
+                        <div class="card-icon"><i class="fa-solid fa-microscope"></i></div>
+                        <h3>Key Focus Areas</h3>
+                        <p>Research & Development of new products, process automation, and machinery development for apparel production.</p>
+                        <span class="click-more"><i class="fa-solid fa-chevron-down toggle-icon"></i> Click to read details</span>
+                    </div>
+                    <div class="card-details">
+                        <p>Our focus revolves around innovating and introducing industrial-grade machinery and technical textiles to local MSMEs in Tirupur.</p>
+                        <ul class="detail-list">
+                            <li><strong>Machine Development:</strong> Design of specialized textile machinery like Double Jacquard electronic looms.</li>
+                            <li><strong>Process Automation:</strong> Enhancing manufacturing speeds while maintaining energy efficiency.</li>
+                            <li><strong>R&D in Technical Textiles:</strong> Development of flame-resistant (PBI-blended) outer shells and protective fabrics.</li>
+                            <li><strong>Prototyping & Testing:</strong> Complete lab testing for industrial feasibility.</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-gears"></i></div>
-                    <h3>Technology Transfer</h3>
-                    <p>Transferring advanced prototype technology to industrial applications, ensuring cost efficiency for local manufacturers.</p>
+
+                <!-- Card 2: Technology Transfer -->
+                <div class="card expandable-card" onclick="toggleCard(this)">
+                    <div class="card-summary">
+                        <div class="card-icon"><i class="fa-solid fa-gears"></i></div>
+                        <h3>Technology Transfer</h3>
+                        <p>Transferring advanced prototype technology to industrial applications, ensuring cost efficiency for local manufacturers.</p>
+                        <span class="click-more"><i class="fa-solid fa-chevron-down toggle-icon"></i> Click to read details</span>
+                    </div>
+                    <div class="card-details">
+                        <p>We facilitate seamless technical adoption by enabling local MSMEs to integrate state-of-the-art tech efficiently.</p>
+                        <ul class="detail-list">
+                            <li><strong>Commercialization:</strong> Converting research prototypes into market-ready industrial setups.</li>
+                            <li><strong>Cost Reduction:</strong> Optimizing production cycles to lower cost-per-unit for manufacturers.</li>
+                            <li><strong>Prototype Audits:</strong> Conducting pilot scale validation before high-volume commercial runs.</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-award"></i></div>
-                    <h3>Policy Support</h3>
-                    <p>Support for R&D policy implementation, preliminary assessment for Govt policies, and skill development programs.</p>
+
+                <!-- Card 3: Policy Support -->
+                <div class="card expandable-card" onclick="toggleCard(this)">
+                    <div class="card-summary">
+                        <div class="card-icon"><i class="fa-solid fa-award"></i></div>
+                        <h3>Policy Support</h3>
+                        <p>Support for R&D policy implementation, preliminary assessment for Govt policies, and skill development programs.</p>
+                        <span class="click-more"><i class="fa-solid fa-chevron-down toggle-icon"></i> Click to read details</span>
+                    </div>
+                    <div class="card-details">
+                        <p>Dept. of CARE acts as a bridge between MSMEs, research institutions, and state/central government bodies.</p>
+                        <ul class="detail-list">
+                            <li><strong>Government Schemes:</strong> Guidance for EDII-TN (IVP), DST, DC MSME Hackathon proposals.</li>
+                            <li><strong>Handloom & Cluster Training:</strong> Hands-on skill enhancement workshops for artisans and operators.</li>
+                            <li><strong>DPR Preparation:</strong> Detailed Project Reports to help MSMEs apply for government grants.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
@@ -116,7 +144,6 @@
             </div>
 
             <div class="grid-3" id="cardsGrid">
-                <!-- 1st Card -->
                 <div class="card filter-item dst">
                     <div>
                         <span class="badge">DST Scheme</span>
@@ -127,7 +154,6 @@
                     <img src="https://th.bing.com/th/id/R.ab7b9b1913f9521ec8093df9c9fd7d31?rik=5y1yueci8PT%2b8A&riu=http%3a%2f%2fppmatlooms.com%2fimages%2flatest-projects%2fDouble-Jacquard-Weaving-Loom.jpg&ehk=c%2fFGkMbHTaD5jn9h8yI7ZuVXka07qXFOVhP0CZaqmTI%3d&risl=&pid=ImgRaw&r=0" alt="Double Jacquard Weaving Loom" class="card-img">
                 </div>
 
-                <!-- 2nd Card -->
                 <div class="card filter-item msme">
                     <div>
                         <span class="badge">MSME Hackathon 5.0</span>
@@ -138,7 +164,6 @@
                     <img src="https://th.bing.com/th/id/R.ac4ba081f1a6adf25b376285959c8b06?rik=EeQ8Io27YW3%2bSQ&riu=http%3a%2f%2fsc02.alicdn.com%2fkf%2fHTB1AgOZNFXXXXcbXFXXq6xXFXXXK%2f200057033%2fHTB1AgOZNFXXXXcbXFXXq6xXFXXXK.jpg&ehk=ssx2FQhAxc5sVi1UCqXfnxbgdSOlp6%2bfK17nMe9yy2s%3d&risl=&pid=ImgRaw&r=0" alt="PBI-Blended Firefighter Suit Image" class="card-img">
                 </div>
 
-                <!-- 3rd Card -->
                 <div class="card filter-item msme">
                     <div>
                         <span class="badge">MSME Hackathon 4.0</span>
@@ -148,7 +173,6 @@
                     <img src="https://media.exapro.com/product/2023/03/P230309111/9764c547e18728d0d7315e921a862fbe/brazzoli-spa-2007-p230309111_1.jpg" alt="Autoclave for Fabric Finishing Machine" class="card-img">
                 </div>
 
-                <!-- 4th Card -->
                 <div class="card filter-item nabard">
                     <div>
                         <span class="badge">NABARD Project</span>
@@ -158,7 +182,6 @@
                     <img src="https://as1.ftcdn.net/v2/jpg/06/20/72/10/1000_F_620721072_V1WrOOxkDuigzPk4okexVOr5i3vwMgCE.jpg" alt="Wastewater Management and Skill Training Session" class="card-img">
                 </div>
 
-                <!-- 5th Card -->
                 <div class="card filter-item nabard">
                     <div>
                         <span class="badge">TNSRLM Scheme</span>
@@ -168,7 +191,6 @@
                     <img src="https://studyhub.org.uk/wp-content/uploads/2023/03/Essentials-of-Becoming-a-Manager-and-Managing-Teams.png" alt="Hardware Cluster & CRP Training Session" class="card-img">
                 </div>
 
-                <!-- 6th Card -->
                 <div class="card filter-item kvic">
                     <div>
                         <span class="badge">KVIC Initiatives</span>
