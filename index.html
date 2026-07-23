@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIFT-TEA | Dept. of CARE - Centre for Apparel Research and Education</title>
+    
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="contact-info">
+            <span><i class="fa-solid fa-envelope"></i> care@nifttea.ac.in</span>
+            <span><i class="fa-solid fa-phone"></i> +91 421 2374200</span>
+        </div>
+        <div>
+            <span>NIFT-TEA Knitwear Fashion Institute, Tirupur</span>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="navbar">
+            <div class="brand-logo">
+                <i class="fa-solid fa-industry"></i>
+                <div class="brand-title">
+                    <h1>Centre for Apparel Research and Education</h1>
+                    <p>Dept. of CARE | NIFT-TEA Tirupur</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About CARE</a></li>
+                    <li><a href="#collaborations">Collaborations</a></li>
+                    <li><a href="#ivp">EDII-TN Schemes</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero">
+        <h2>Transforming Garment & Textile MSMEs</h2>
+        <p>Providing advanced technological support, process automation, R&D solutions, and skill development for MSMEs across Tirupur and Tamil Nadu.</p>
+        <button class="btn-gold" id="toggleHighlightsBtn"><i class="fa-solid fa-chart-line"></i> View Live Financial Highlights (2025-2026)</button>
+
+        <!-- Highlights Card -->
+        <div class="highlights-card" id="highlightsCard">
+            <h3 class="highlights-title"><i class="fa-solid fa-bullseye gold-icon"></i> Live Financial Highlights (FY 2025 - 2026)</h3>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <h3 id="statGrants">₹ 0</h3>
+                    <p>Major Grants (DST + DC MSME)</p>
+                </div>
+                <div class="stat-box">
+                    <h3 id="statTrained">0</h3>
+                    <p>Trained Beneficiaries (TNSRLM & NABARD)</p>
+                </div>
+                <div class="stat-box">
+                    <h3 id="statProjects">0</h3>
+                    <p>Sanctioned IVP Projects (EDII-TN)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="section-header">
+                <h2>About Dept. of CARE</h2>
+            </div>
+            <p class="about-text">
+                A dedicated centre aimed at strengthening the technological capacity of Textile, Apparel, and Fashion MSMEs in Tirupur. CARE provides incubation support, machine development, and innovative product testing.
+            </p>
+            <div class="grid-3">
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-microscope"></i></div>
+                    <h3>Key Focus Areas</h3>
+                    <p>Research & Development of new products, process automation, and machinery development for apparel production.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-gears"></i></div>
+                    <h3>Technology Transfer</h3>
+                    <p>Transferring advanced prototype technology to industrial applications, ensuring cost efficiency for local manufacturers.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-award"></i></div>
+                    <h3>Policy Support</h3>
+                    <p>Support for R&D policy implementation, preliminary assessment for Govt policies, and skill development programs.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Collaborations Section -->
+        <section id="collaborations">
+            <div class="section-header">
+                <h2>Collaborative Activities with Govt & Institutions</h2>
+            </div>
+
+            <div class="filter-tabs">
+                <button class="tab-btn active" onclick="filterCards('all', event)">All Programs</button>
+                <button class="tab-btn" onclick="filterCards('dst', event)">DST (Govt. of India)</button>
+                <button class="tab-btn" onclick="filterCards('msme', event)">DC MSME</button>
+                <button class="tab-btn" onclick="filterCards('nabard', event)">NABARD & TNSRLM</button>
+                <button class="tab-btn" onclick="filterCards('kvic', event)">KVIC</button>
+            </div>
+
+            <div class="grid-3" id="cardsGrid">
+                <!-- 1st Card -->
+                <div class="card filter-item dst">
+                    <div>
+                        <span class="badge">DST Scheme</span>
+                        <h3>Mat Loom Upgradation for Rural Women</h3>
+                        <p><strong>Sanctioned Budget:</strong> ₹56 Lakhs (3-Year Plan)</p>
+                        <p class="card-desc">Upgraded electronic loom prototype successfully installed and tested at NIFT-TEA center to boost rural employment.</p>
+                    </div>
+                    <img src="https://th.bing.com/th/id/R.ab7b9b1913f9521ec8093df9c9fd7d31?rik=5y1yueci8PT%2b8A&riu=http%3a%2f%2fppmatlooms.com%2fimages%2flatest-projects%2fDouble-Jacquard-Weaving-Loom.jpg&ehk=c%2fFGkMbHTaD5jn9h8yI7ZuVXka07qXFOVhP0CZaqmTI%3d&risl=&pid=ImgRaw&r=0" alt="Double Jacquard Weaving Loom" class="card-img">
+                </div>
+
+                <!-- 2nd Card -->
+                <div class="card filter-item msme">
+                    <div>
+                        <span class="badge">MSME Hackathon 5.0</span>
+                        <h3>PBI-Blended Firefighter Suit</h3>
+                        <p><strong>Sanctioned Amount:</strong> ₹12.75 Lakhs</p>
+                        <p class="card-desc">High-performance flame-resistant outer shell fabric developed for firefighter suits using PBI-blended yarn.</p>
+                    </div>
+                    <img src="https://th.bing.com/th/id/R.ac4ba081f1a6adf25b376285959c8b06?rik=EeQ8Io27YW3%2bSQ&riu=http%3a%2f%2fsc02.alicdn.com%2fkf%2fHTB1AgOZNFXXXXcbXFXXq6xXFXXXK%2f200057033%2fHTB1AgOZNFXXXXcbXFXXq6xXFXXXK.jpg&ehk=ssx2FQhAxc5sVi1UCqXfnxbgdSOlp6%2bfK17nMe9yy2s%3d&risl=&pid=ImgRaw&r=0" alt="PBI-Blended Firefighter Suit Image" class="card-img">
+                </div>
+
+                <!-- 3rd Card -->
+                <div class="card filter-item msme">
+                    <div>
+                        <span class="badge">MSME Hackathon 4.0</span>
+                        <h3>Autoclave for Fabric Finishing</h3>
+                        <p class="card-desc">Industrial prototype design and thermal treatment autoclave development for high-density fabric finishing.</p>
+                    </div>
+                    <img src="https://media.exapro.com/product/2023/03/P230309111/9764c547e18728d0d7315e921a862fbe/brazzoli-spa-2007-p230309111_1.jpg" alt="Autoclave for Fabric Finishing Machine" class="card-img">
+                </div>
+
+                <!-- 4th Card -->
+                <div class="card filter-item nabard">
+                    <div>
+                        <span class="badge">NABARD Project</span>
+                        <h3>Wastewater & DPR Training</h3>
+                        <p class="card-desc">Hands-on skill training conducted for 80 Wastewater Technicians across 2 batches, along with DPR preparation support.</p>
+                    </div>
+                    <img src="https://as1.ftcdn.net/v2/jpg/06/20/72/10/1000_F_620721072_V1WrOOxkDuigzPk4okexVOr5i3vwMgCE.jpg" alt="Wastewater Management and Skill Training Session" class="card-img">
+                </div>
+
+                <!-- 5th Card -->
+                <div class="card filter-item nabard">
+                    <div>
+                        <span class="badge">TNSRLM Scheme</span>
+                        <h3>Hardware Cluster & CRP Training</h3>
+                        <p class="card-desc">2-Day Master Trainer Training program conducted for CRP Coat manufacturing and Handloom cluster accreditation.</p>
+                    </div>
+                    <img src="https://studyhub.org.uk/wp-content/uploads/2023/03/Essentials-of-Becoming-a-Manager-and-Managing-Teams.png" alt="Hardware Cluster & CRP Training Session" class="card-img">
+                </div>
+
+                <!-- 6th Card -->
+                <div class="card filter-item kvic">
+                    <div>
+                        <span class="badge">KVIC Initiatives</span>
+                        <h3>Credit Awareness & Product Exhibition</h3>
+                        <p class="card-desc">Awareness workshops and product displays organized in coordination with KVIC for rural artisans and textiles.</p>
+                    </div>
+                    <img src="https://handloomandsericulture.bihar.gov.in/wp-content/uploads/2022/06/211016_Handloom-Exhibition-600x400-1.jpg" alt="KVIC Credit Awareness & Product Exhibition Event" class="card-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- EDII-TN Table -->
+        <section id="ivp">
+            <div class="section-header">
+                <h2>Collaborative Activities with EDII-TN (IVP Scheme)</h2>
+            </div>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>Applicant Company</th>
+                            <th>Role / Department</th>
+                            <th>Project Title</th>
+                            <th>Progress & Grant Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><strong>JM TECHY</strong></td>
+                            <td>Textile Engineering</td>
+                            <td>Optimization and Scaling Up of Sustainable Dyeing Process & Auxiliaries for Textile Dyeing Industries.</td>
+                            <td><span class="status-sanctioned">₹ 3.00 Lakhs (Sanctioned)</span></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><strong>MIRAYPAN CARBONS PVT LTD</strong></td>
+                            <td>Advanced Materials</td>
+                            <td>Optimization and Commercialization of Carbon-Based EMI Shielding Fabrics Meeting Defence BSI Standards.</td>
+                            <td><span class="status-sanctioned">₹ 7.00 Lakhs (Sanctioned)</span></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><strong>MIGARA MED FAB PVT LTD</strong></td>
+                            <td>Medical Textiles</td>
+                            <td>Activated Carbon Fabric an Advanced Wound Dressing that Achieves Rapid Healing.</td>
+                            <td><span class="status-sanctioned">₹ 3.00 Lakhs (Sanctioned)</span></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><strong>ESSDI INFOTECH CORP</strong></td>
+                            <td>Software & Automation</td>
+                            <td>Automatic Pattern Generation for Textile and Leather Garment Manufacturing using AI.</td>
+                            <td><span class="status-sanctioned">₹ 3.00 Lakhs (Sanctioned)</span></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><strong>RANGAA MANNAR NUANS PVT LTD</strong></td>
+                            <td>Environmental Biotech</td>
+                            <td>Optimization & Scaling Up of Eco Friendly Broad-Spectrum Bacterial Consortium Product for Industrial Waste Water Treatment.</td>
+                            <td><span class="status-sanctioned">₹ 3.00 Lakhs (Sanctioned)</span></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td><strong>HARSA INDUSTRIES</strong></td>
+                            <td>Textile & Apparel</td>
+                            <td>Optimization and Development of High Performance Antimicrobial & Moisture Wicking Sportswear Fabric.</td>
+                            <td><span class="status-sanctioned">₹ 2.00 Lakhs (Sanctioned)</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>NIFT-TEA CARE</h4>
+                <p class="footer-text">Centre for Apparel Research and Education<br>NIFT-TEA Institute, Tirupur, TN - 641606</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#about">About CARE</a></li>
+                    <li><a href="#collaborations">Research Projects</a></li>
+                    <li><a href="#ivp">EDII-TN Schemes</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Details</h4>
+                <p class="footer-text"><i class="fa-solid fa-envelope gold-icon"></i> care@nifttea.ac.in</p>
+                <p class="footer-text"><i class="fa-solid fa-phone gold-icon"></i> +91 421 2374200</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 NIFT-TEA Knitwear Fashion Institute - Dept. of CARE. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- External Script -->
+    <script src="script.js"></script>
+</body>
+</html>
