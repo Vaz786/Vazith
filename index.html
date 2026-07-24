@@ -11,35 +11,249 @@
     
     <!-- External CSS -->
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Collaborations Section Zigzag Card Layout */
+        #collaborations .grid-3 {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        #collaborations .card {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background: #ffffff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Zigzag Alternating Rows */
+        #collaborations .card:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        #collaborations .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        #collaborations .card-content {
+            flex: 1;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #collaborations .card-img {
+            width: 320px;
+            height: 100%;
+            object-fit: cover;
+            min-height: 220px;
+        }
+
+        /* Hero Banner Layout */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .hero-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            width: 100%;
+            gap: 40px;
+            padding: 30px 20px;
+        }
+
+        .hero-text-content {
+            flex: 1;
+            text-align: left;
+        }
+
+        .hero-image-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-side-img {
+            width: 100%;
+            max-width: 520px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Navbar Layout with Blended Logo and Division Text */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 30px;
+            background: #ffffff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* Logo styling with blend mode to remove background and highlight graphic */
+        .brand-logo img.header-brand-img {
+            height: 65px;
+            width: auto;
+            object-fit: contain;
+            mix-blend-mode: multiply;
+            filter: contrast(1.1);
+        }
+
+        .brand-divider {
+            width: 1px;
+            height: 35px;
+            background-color: #ddd;
+        }
+
+        .brand-title-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-title-text .division-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            letter-spacing: 0.5px;
+            line-height: 1.2;
+        }
+
+        .brand-title-text .division-sub {
+            font-size: 0.75rem;
+            color: #666;
+            font-weight: 500;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        nav ul li a:hover {
+            color: #f39c12;
+        }
+
+        .btn-contact {
+            background-color: #f39c12;
+            color: #fff;
+            padding: 10px 22px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 10px rgba(243, 156, 18, 0.3);
+            transition: background 0.2s;
+        }
+
+        .btn-contact:hover {
+            background-color: #e67e22;
+        }
+
+        @media (max-width: 768px) {
+            #collaborations .card,
+            #collaborations .card:nth-child(even) {
+                flex-direction: column;
+            }
+            
+            #collaborations .card-img {
+                width: 100%;
+                height: 200px;
+            }
+
+            .hero-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text-content {
+                text-align: center;
+            }
+
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px;
+            }
+
+            .brand-logo img.header-brand-img {
+                height: 55px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Header Navigation -->
+    <!-- Header Navigation with Blended Logo and NiftTea-Care Division Title -->
     <header>
         <div class="navbar">
             <div class="brand-logo">
-                <i class="fa-solid fa-industry logo-icon"></i>
-                <div class="brand-title">
-                    <h1>Centre for Apparel Research and Education</h1>
-                    <p>Dept. of CARE | NIFT-TEA Tirupur</p>
+                <img src="images/logo.jpg" alt="Nift-TEA Logo" class="header-brand-img">
+                <div class="brand-divider"></div>
+                <div class="brand-title-text">
+                    <span class="division-name">NiftTea-Care</span>
+                    <span class="division-sub">Division of Apparel Research & Education</span>
                 </div>
             </div>
             <nav>
                 <ul>
-                    <li><a href="#about">About CARE</a></li>
-                    <li><a href="#collaborations">Collaborations</a></li>
-                    <li><a href="#ivp">EDII-TN Schemes</a></li>
+                    <li><a href="#about">Who we are <i class="fa-solid fa-chevron-down" style="font-size: 0.7rem;"></i></a></li>
+                    <li><a href="#collaborations">Collaborations <i class="fa-solid fa-chevron-down" style="font-size: 0.7rem;"></i></a></li>
+                    <li><a href="#ivp">EDII-TN Schemes <i class="fa-solid fa-chevron-down" style="font-size: 0.7rem;"></i></a></li>
                     <li><a href="#contact">Contact Us</a></li>
                 </ul>
             </nav>
+            <a href="#contact" class="btn-contact">Contact us</a>
         </div>
     </header>
 
     <!-- Hero Banner -->
     <section class="hero">
-        <h2>Transforming Garment & Textile MSMEs</h2>
-        <p>Providing advanced technological support, process automation, R&D solutions, and skill development for MSMEs across Tirupur and Tamil Nadu.</p>
-        <button class="btn-orange" id="toggleHighlightsBtn"><i class="fa-solid fa-chart-line"></i> View Live Financial Highlights (2025-2026)</button>
+        <div class="hero-container">
+            <div class="hero-text-content">
+                <h2>Transforming Garment & Textile MSMEs</h2>
+                <p>Providing advanced technological support, process automation, R&D solutions, and skill development for MSMEs across Tirupur and Tamil Nadu.</p>
+                <button class="btn-orange" id="toggleHighlightsBtn"><i class="fa-solid fa-chart-line"></i> View Live Financial Highlights (2025-2026)</button>
+            </div>
+            <div class="hero-image-content">
+                <img src="https://resources.erp.compare/wp-content/uploads/2024/09/SAP-Business-One-for-Fashion-1536x878.jpg" alt="SAP Business One for Fashion & Apparel MSMEs" class="hero-side-img">
+            </div>
+        </div>
 
         <!-- Highlights Card -->
         <div class="highlights-card" id="highlightsCard">
@@ -129,7 +343,7 @@
             </div>
         </section>
 
-        <!-- Collaborations Section (Updated for Horizontal Side-by-Side View) -->
+        <!-- Collaborations Section -->
         <section id="collaborations">
             <div class="section-header">
                 <h2>Collaborative Activities with Govt & Institutions</h2>
@@ -149,8 +363,10 @@
                     <div class="card-content">
                         <span class="badge">DST Scheme</span>
                         <h3>Mat Loom Upgradation for Rural Women</h3>
-                        <p><strong>Sanctioned Budget:</strong> ₹56 Lakhs (3-Year Plan)</p>
-                        <p class="card-desc">Upgraded electronic loom prototype successfully installed and tested at NIFT-TEA center to boost rural employment.</p>
+                        <p class="card-desc"><strong>Sanctioned Budget:</strong> ₹56 Lakhs (3-Year Plan)</p>
+                        <p class="card-desc">
+                            Upgraded electronic loom prototype successfully installed and tested at NIFT-TEA center to boost rural employment and handloom efficiency. This initiative transforms conventional weaving workflows into automated processes. It provides structured skill orientation sessions for rural women artisans to seamlessly operate modern machinery. Furthermore, it creates sustainable livelihood opportunities across target clusters in Tamil Nadu. The project stands as a benchmark for technology integration in decentralized sectors.
+                        </p>
                     </div>
                     <img src="https://th.bing.com/th/id/R.ab7b9b1913f9521ec8093df9c9fd7d31?rik=5y1yueci8PT%2b8A&riu=http%3a%2f%2fppmatlooms.com%2fimages%2flatest-projects%2fDouble-Jacquard-Weaving-Loom.jpg&ehk=c%2fFGkMbHTaD5jn9h8yI7ZuVXka07qXFOVhP0CZaqmTI%3d&risl=&pid=ImgRaw&r=0" alt="Double Jacquard Weaving Loom" class="card-img">
                 </div>
@@ -160,10 +376,12 @@
                     <div class="card-content">
                         <span class="badge">MSME Hackathon 5.0</span>
                         <h3>PBI-Blended Firefighter Suit</h3>
-                        <p><strong>Sanctioned Amount:</strong> ₹12.75 Lakhs</p>
-                        <p class="card-desc">High-performance flame-resistant outer shell fabric developed for firefighter suits using PBI-blended yarn.</p>
+                        <p class="card-desc"><strong>Sanctioned Amount:</strong> ₹12.75 Lakhs</p>
+                        <p class="card-desc">
+                            High-performance flame-resistant outer shell fabric developed for firefighter suits using advanced PBI-blended yarn formulations. The material undergoes rigorous thermal endurance testing to ensure maximum safety under extreme rescue environments. Specialized laboratory testing evaluates heat attenuation, tensile strength, and chemical splash resistance properties. Local manufacturing units receive technical know-how to scale up commercial production affordably. This innovation directly addresses critical safety gear gaps faced by national emergency response squads.
+                        </p>
                     </div>
-                    <img src="https://th.bing.com/th/id/R.ac4ba081f1a6adf25b376285959c8b06?rik=EeQ8Io27YW3%2bSQ&riu=http%3a%2f%2fsc02.alicdn.com%2fkf%2fHTB1AgOZNFXXXXcbXFXXq6xXFXXXK%2f200057033%2fHTB1AgOZNFXXXXcbXFXXq6xXFXXXK.jpg&ehk=ssx2FQhAxc5sVi1UCqXfnxbgdSOlp6%2bfK17nMe9yy2s%3d&risl=&pid=ImgRaw&r=0" alt="PBI-Blended Firefighter Suit Image" class="card-img">
+                    <img src="https://th.bing.com/th/id/R.ac4ba081f1a6adf25b376285959c8b06?rik=EeQ8Io27YW3%2bSQ&riu=http%3a%2f%2fsc02.alicdn.com%2fkf%2fHTB1AgOZNFXXXXcbXFXXq6xXFXXXK%2f200057033%2fHTB1AgOZNFXXXXcbXFXXq6xXFXXXK.jpg&ehk=ssx2FQhAxc5sVi1UCqXfnxbgdSOlp6%2bfK17nMe9yy2s%3d&risl=&pid=ImgRaw&r=0" alt="PBI-Blended Firefighter Suit" class="card-img">
                 </div>
 
                 <!-- Card 3 -->
@@ -172,8 +390,11 @@
                         <span class="badge">MSME Hackathon 4.0</span>
                         <h3>Autoclave for Fabric Finishing</h3>
                         <p class="card-desc">Industrial prototype design and thermal treatment autoclave development for high-density fabric finishing.</p>
+                        <p class="card-desc">
+                            Engineered specifically to optimize high-pressure treatments required for technical textile finishing operations. The system incorporates precision temperature and pressure regulatory controllers to maintain uniform quality parameters. Energy conservation mechanisms are integrated to lower utility consumption during continuous factory shifts. Comprehensive pilot trials demonstrate significant improvements in fabric dimensional stability and finish consistency. The successful prototype offers local processing houses a cost-effective domestic automation alternative.
+                        </p>
                     </div>
-                    <img src="https://media.exapro.com/product/2023/03/P230309111/9764c547e18728d0d7315e921a862fbe/brazzoli-spa-2007-p230309111_1.jpg" alt="Autoclave for Fabric Finishing Machine" class="card-img">
+                    <img src="https://media.exapro.com/product/2023/03/P230309111/9764c547e18728d0d7315e921a862fbe/brazzoli-spa-2007-p230309111_1.jpg" alt="Autoclave for Fabric Finishing" class="card-img">
                 </div>
 
                 <!-- Card 4 -->
@@ -182,8 +403,11 @@
                         <span class="badge">NABARD Project</span>
                         <h3>Wastewater & DPR Training</h3>
                         <p class="card-desc">Hands-on skill training conducted for 80 Wastewater Technicians across 2 batches, along with DPR preparation support.</p>
+                        <p class="card-desc">
+                            Comprehensive training modules developed to address crucial environmental compliance needs in textile clusters. Participants learn advanced effluent treatment monitoring, chemical dosing management, and water recycling techniques. Expert-led sessions guide entrepreneurs through detailed project report (DPR) preparation for funding approvals. Field visits to operational treatment plants provide candidates with practical troubleshooting experience. The program successfully empowers local technicians to maintain sustainable ecological practices in units.
+                        </p>
                     </div>
-                    <img src="https://as1.ftcdn.net/v2/jpg/06/20/72/10/1000_F_620721072_V1WrOOxkDuigzPk4okexVOr5i3vwMgCE.jpg" alt="Wastewater Management and Skill Training Session" class="card-img">
+                    <img src="https://as1.ftcdn.net/v2/jpg/06/20/72/10/1000_F_620721072_V1WrOOxkDuigzPk4okexVOr5i3vwMgCE.jpg" alt="Wastewater Management Training" class="card-img">
                 </div>
 
                 <!-- Card 5 -->
@@ -192,8 +416,11 @@
                         <span class="badge">TNSRLM Scheme</span>
                         <h3>Hardware Cluster & CRP Training</h3>
                         <p class="card-desc">2-Day Master Trainer Training program conducted for CRP Coat manufacturing and Handloom cluster accreditation.</p>
+                        <p class="card-desc">
+                            Focused capacity building initiative designed to upgrade the technical competence of community resource persons. Practical workshops cover specialized coat construction methodologies, quality checking, and standardized stitching processes. Guidance is provided on meeting institutional cluster accreditation requirements and compliance norms. Trainees receive extensive instruction on transferring acquired sewing skills to grassroots manufacturing groups. This creates an organized network of skilled master trainers supporting regional apparel initiatives.
+                        </p>
                     </div>
-                    <img src="https://studyhub.org.uk/wp-content/uploads/2023/03/Essentials-of-Becoming-a-Manager-and-Managing-Teams.png" alt="Hardware Cluster & CRP Training Session" class="card-img">
+                    <img src="https://studyhub.org.uk/wp-content/uploads/2023/03/Essentials-of-Becoming-a-Manager-and-Managing-Teams.png" alt="Hardware Cluster Training" class="card-img">
                 </div>
 
                 <!-- Card 6 -->
@@ -202,8 +429,11 @@
                         <span class="badge">KVIC Initiatives</span>
                         <h3>Credit Awareness & Product Exhibition</h3>
                         <p class="card-desc">Awareness workshops and product displays organized in coordination with KVIC for rural artisans and textiles.</p>
+                        <p class="card-desc">
+                            Special outreach events organized to educate traditional artisans about financial assistance and subsidy schemes. Financial literacy sessions cover banking procedures, mudra loans, and digital credit management facilities. Curated product exhibitions offer rural creators a direct platform to showcase indigenous textile designs to buyers. Interactive networking sessions connect artisans with leading apparel brands for potential market linkages. The initiative effectively bridges information gaps and promotes inclusive economic growth.
+                        </p>
                     </div>
-                    <img src="https://handloomandsericulture.bihar.gov.in/wp-content/uploads/2022/06/211016_Handloom-Exhibition-600x400-1.jpg" alt="KVIC Credit Awareness & Product Exhibition Event" class="card-img">
+                    <img src="https://handloomandsericulture.bihar.gov.in/wp-content/uploads/2022/06/211016_Handloom-Exhibition-600x400-1.jpg" alt="KVIC Exhibition" class="card-img">
                 </div>
             </div>
         </section>
